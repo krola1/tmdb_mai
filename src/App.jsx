@@ -1,13 +1,17 @@
 import "./App.css";
-import { fetchTrendingMovies } from "./api/tmdb_functions";
 import { useTrendingMovies } from "./hooks/useTrendingMovies";
 
 export default function App() {
-  const { data, isLoading } = useTrendingMovies();
+  const { data, isLoading, isError, error } = useTrendingMovies();
 
   if (isLoading) return <h1>loading</h1>;
-  console.log("tanstack:", isLoading, data);
-  console.log("axios:", fetchTrendingMovies());
+  if (isError) return <h1>An error occued, {error}</h1>;
 
-  return <h1>App</h1>;
+  return (
+    <>
+      {data.results.map((movie) => (
+        <h3>{movie.title}</h3>
+      ))}
+    </>
+  );
 }
