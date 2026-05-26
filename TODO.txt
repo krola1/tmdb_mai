@@ -1,0 +1,32 @@
+
+
+dependencies:
+react router -- done
+axios -- done
+tanstac query --done
+
+api:
+env.js -- done
+main axios profile
+tanstac hooks for searc, trending, details
+
+
+pages:
+trending
+search
+details
+
+components:
+navBar
+list - for displaying
+card
+
+utils:
+imagehandler.
+constants
+
+
+//---- nice to have
+ 
+ display more info when card is hovered -- onMouse enter and leave.
+
